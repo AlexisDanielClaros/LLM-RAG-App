@@ -45,9 +45,14 @@ Example:
 python rag_app.py --rebuild --k 6 --c 1500 --o 300 What advice does the Caterpillar give Alice?
 ```
 
-## 4) Evaluate
+## 4) Evaluation
 
-Run to get an evaluation of the RAG correctness and groundedness using ROUGE metrics. After running the script, it will add in the terminal the Langsmith link.
+Run to get an evaluation of the RAG correctness and groundedness using LLM-as-judge.
+After running the script, it will print in the terminal the Langsmith link.
+
+```bash
+ollama pull mistral
+```
 
 ```bash
 python evaluation\evaluate.py
